@@ -2,8 +2,6 @@
 
 4 KB Python chess engine for [make.fun tiny-chess-01](https://make.fun/bounty/tiny-chess-01).
 
-Negamax αβ, iterative deepening (node budget), quiescence (captures+promos), MVV-LVA + TT-move/killers/history, TT, PST, check extension, repetition, LMR. Stdlib only; lzma+base85 `main.py` ≤4096 bytes. MIT.
+Negamax αβ, iterative deepening (node budget), quiescence (captures+promos), MVV-LVA + TT-move/killers/history, TT, tuned PST with endgame king centralization and passed-pawn bonuses, check extension, repetition. Stdlib only; lzma+base85 `main.py` ≤4096 bytes. MIT.
 
-Local practice (kit trials 0–2): Elo 1451 / 1545 / 1451 (mean ~1482).
-
-NMP was A/B-tested vs this build (12 games, 25k nodes); fitting it under 4096 required eval cuts that scored worse (4.5–6.5/12), so NMP was not kept. LMR remains.
+Local practice (kit trials 0–2, prior build): Elo 1451 / 1545 / 1451 (mean ~1482). Eval tune A/B vs that build: 7.0/12.
